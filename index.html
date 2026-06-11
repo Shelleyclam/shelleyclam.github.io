@@ -371,11 +371,9 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
       <div class="exp-right">
         <div class="exp-role">Business Analyst & Automation Intern</div>
         <ul class="exp-bullets">
-          <li>Worked directly under startup founders across three companies, sitting with them to understand pain points before building anything</li>
-          <li>Built equipment tracking and shoot scheduling automation for a media production company, eliminating coordination chaos across teams</li>
-          <li>Developed an end to end lead qualification automation and chatbot messaging system for an on-demand printing company</li>
-          <li>Spotted and built a custom learning platform for a media company's customers, a product they didn't know to ask for</li>
-          <li>Optimised a self-service chatbot cutting API costs by ₹20,000+/month and increasing task completion rates</li>
+          <li>Built an n8n webhook workflow on Zoho Desk that classified, prioritised, and routed every incoming ticket automatically — a RAG layer retrieved from a vector store knowledge base and generated LLM-drafted responses per ticket, deployed live from day one. Eliminated manual routing entirely, cut first response time by 2.5 hours, and reduced agent intake time by 60%</li>
+          <li>Built a three-component asset tracking system — Google Forms for request intake, Telegram Bot with inline approve/reject actions, and Notion as a live utilisation dashboard — fully digitising the request-to-approval flow and reducing equipment mismanagement by 40%</li>
+          <li>Built a Voiceflow chatbot across three functional branches: lead capture with direct CRM API write, decision-tree FAQ handling, and appointment scheduling with calendar integration — reducing API costs by ₹20,000+/month and removing repetitive inbound queries from the sales queue</li>
         </ul>
       </div>
     </div>
@@ -403,7 +401,7 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
             <span class="proj-tag">Python</span><span class="proj-tag">OpenCV</span><span class="proj-tag">Flask</span><span class="proj-tag">Linux</span>
           </div>
           <div class="proj-actions">
-            <a href="https://github.com/Shelleyclam" target="_blank" rel="noopener" class="proj-link">View on GitHub ↗</a>
+            <a href="https://github.com/Shelleyclam/Drowsiness-Detectection-for-commercial-Vehicles" target="_blank" rel="noopener" class="proj-link">View on GitHub ↗</a>
             <span class="proj-link-muted">Patent No. 202541037313</span>
           </div>
           <button class="proj-story-toggle" onclick="toggleStory('story-drowsiness', this)">
@@ -418,10 +416,8 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
       </div>
       <div class="proj-story" id="story-drowsiness">
         <div class="proj-story-inner">
-          <p>There's a highway that passes right next to my college. For a while I kept seeing and hearing about accidents happening there at night, almost always heavy vehicles, trucks doing long distance routes. I knew most of those trucks in India are old, minimal technology, no safety systems built in.</p>
-          <p>Before I built anything I went and talked to truck drivers directly. What they told me reframed the whole problem. They weren't falling asleep because they were careless, they were deliberately pushing through the night because that's when the roads are clear and they can cover the most distance. Sleep was something they were consciously trading off. That's a very different problem than just fatigue.</p>
-          <p>The idea became a device that sits in the truck, monitors the driver using computer vision, and the moment it detects eyes closed beyond a threshold or a face completely out of frame, an alarm goes off in the cab and an SOS with location gets pushed to the fleet manager's app. No driver has to do anything. The system is watching so they don't have to fight that battle alone.</p>
-          <p>We built the model and got it working within 24 hours at a national hackathon with a team of three and placed 4th. The hardware prototype was ready but connecting the device to the software without wifi was the blocker we ran into. The project still got published as a patent, which meant a lot given how fast we moved and how real the problem was.</p>
+          <p>Driver fatigue is one of the leading causes of road accidents in commercial transport, yet most detection systems at the time relied on single-metric thresholds that failed under varying lighting and head positions. The goal was to build something robust enough to work in real conditions — not just a demo. The hybrid detection approach (Haar cascades for speed, HOG-SVM for accuracy under poor lighting) came from testing failures, not from a textbook.</p>
+          <p>The project was built under a 24-hour hackathon constraint with a team of three, reached the national final, and resulted in a published patent — which pushed us to document the system properly and think about real deployment constraints for the first time.</p>
         </div>
       </div>
     </div>
@@ -432,7 +428,7 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
         <div>
           <div class="proj-name">HSwin-OTD</div>
           <div class="proj-badges"><span class="badge badge-blue">ICISC 2026</span><span class="badge badge-gray">Oxford Co-author</span></div>
-          <p class="proj-summary">Four-stage hierarchical Swin Transformer for multi-class intraocular tumor classification on ultra wide field fundus images, outperforming VGG16, ResNet50, and ViT baselines at 97.43% accuracy. Multi-layer explainability stack using Grad-CAM++ and Integrated Gradients. RAG pipeline over 278 ophthalmology papers using BioBERT embeddings and ChromaDB, generating literature-backed diagnostic reports per classification.</p>
+          <p class="proj-summary">Designed a four-stage hierarchical Swin Transformer (Swin-Base Patch4 Window7 224, pretrained ImageNet-22K) for multi-class intraocular tumor classification across 2,031 UWF retinal images with severe class imbalance (6 diagnostic categories). Used four-stage progressive unfreezing to prevent catastrophic forgetting. Trained with AdamW, Cosine Annealing Warm Restarts, Weighted Cross-Entropy Loss, and FP16 mixed precision on Tesla T4. Explainability via multi-stage Grad-CAM++ fused with Integrated Gradients into a consensus heatmap. RAG module built on 3,342 chunks from 278 papers, embedded with BioBERT and indexed in ChromaDB — generating literature-grounded diagnostic narratives with inline citations. Achieved 97.43% accuracy (0.97 F1-score), outperforming VGG16 (81.99%), ResNet50 (79.04%), and ViT Base (88.24%).</p>
           <div class="proj-stack">
             <span class="proj-tag">Python</span><span class="proj-tag">PyTorch</span><span class="proj-tag">Swin Transformer</span><span class="proj-tag">Grad-CAM++</span><span class="proj-tag">RAG</span><span class="proj-tag">BioBERT</span>
           </div>
@@ -451,10 +447,8 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
       </div>
       <div class="proj-story" id="story-hswin">
         <div class="proj-story-inner">
-          <p>I was looking for a gap, a problem that mattered and that nobody was really solving well. Intraocular tumors kept coming up. They're relatively rare compared to other eye diseases which is exactly why research on them is thin, but they're also quietly deadly if missed early. That combination of underresearched and high stakes felt like exactly the kind of problem worth going after.</p>
-          <p>The challenge with medical AI though is that accuracy alone is not enough. A doctor is not going to trust a model that just says "this is a tumor" with no explanation. So the framework had to do two things at once, classify correctly and show its work.</p>
-          <p>What we built does exactly that. The model looks at ultra wide field fundus images of the eye, classifies them into tumor types with 97.43% accuracy, and then generates a full explanation of why. It highlights the specific regions of the eye it focused on to make that call, and it pulls from 278 published ophthalmology papers to back up the classification with actual medical literature. A doctor using this doesn't just get a label, they get a report they can interrogate.</p>
-          <p>That last part, grounding the AI's decision in real published research rather than just gradient maps, is what made this feel like something that could actually be used in practice and not just a research exercise. The paper caught the attention of a professor at the University of Oxford who agreed to come on as a co-author. That meant a lot, not just as validation but because it confirmed that what we built was taken seriously beyond the classroom.</p>
+          <p>The starting point was a deliberate search for a medical imaging problem worth solving. The requirement was a real-world dataset with genuine class imbalance, a multi-class challenge that existing CNN-based models handled poorly, and a domain where a wrong prediction carries real clinical consequence. Intraocular tumor classification checked all three — delayed diagnosis can result in irreversible vision loss, and in aggressive cases like Uveal Melanoma, metastatic spread with survival rates below 20%.</p>
+          <p>The secondary constraint shaped the entire architecture from the start: a system that predicts accurately but cannot justify its reasoning is not deployable in any clinical setting where accountability matters. That meant explainability was not an afterthought — it was a design requirement. The RAG module came last, closing the gap between "where the model looked" and "what that clinically means" — every claim in the output traceable to a specific paper.</p>
         </div>
       </div>
     </div>
@@ -470,7 +464,7 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
             <span class="proj-tag">Python</span><span class="proj-tag">Flask</span><span class="proj-tag">scikit-learn</span><span class="proj-tag">pandas</span><span class="proj-tag">matplotlib</span>
           </div>
           <div class="proj-actions">
-            <span class="proj-link-muted">Team repo · private</span>
+            <a href="https://github.com/Shelleyclam/CroPro-AI-webapp-for-farmers-" target="_blank" rel="noopener" class="proj-link">View on GitHub ↗</a>
           </div>
           <button class="proj-story-toggle" onclick="toggleStory('story-cropro', this)">
             Read the story
@@ -484,10 +478,8 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
       </div>
       <div class="proj-story" id="story-cropro">
         <div class="proj-story-inner">
-          <p>I grew up in a family of farmers. My grandparents farmed and I watched that world closely enough to understand what knowledge actually gets passed down and what gets lost when the next generation steps in without the same years of experience.</p>
-          <p>Modern farmers, especially younger ones stepping into it for the first time, often have access to soil test reports from the government but no clear way to act on the numbers. They know something is wrong with a plant but don't know what chemical to reach for. They're making irrigation calls based on guesswork instead of actual weather data.</p>
-          <p>CroPro connects those dots. You put in your soil values from the government test and it tells you what to grow. It reads your location's weather and tells you how much to irrigate and when. And if something looks wrong with a crop, you take a photo, upload it, and it identifies the disease and gives you the exact chemical composition you need to treat it, not just a brand name but what's actually in it and why.</p>
-          <p>It's a simple idea but the gap it fills is real. Farming knowledge used to live in people. CroPro is an attempt to make sure that knowledge doesn't disappear just because the person carrying it isn't around anymore.</p>
+          <p>24 hours, a team of three, and a problem statement about sustainable agriculture. Small farmers in India make crop decisions based on intuition and habit — often the wrong ones for their specific soil, climate, and resource constraints. We wanted to build something that gave them a data-backed recommendation they could actually use.</p>
+          <p>I led the team and owned the backend and ML integration end-to-end. The Random Forest classifier was chosen deliberately — interpretable enough that we could explain a recommendation, not just produce one. The hardest part wasn't the model, it was scoping what was actually buildable in 24 hours that still felt complete.</p>
         </div>
       </div>
     </div>
